@@ -16,13 +16,13 @@ const main = async () => {
 
   const limit: bigint = await provider.estimateGas({
     from: signer.address,
-    to: "to_address",
+    to: "your_to_address",
     value: parseUnits("0.0000001", "ether"),
   });
 
   const tx = await signer.sendTransaction({
-    from: "from_address",
-    to: "to_address",
+    from: "your_from_address",
+    to: "your_to_address",
     value: parseUnits("0.0000001", "ether"),
     gasLimit: limit,
     nonce: await signer.getNonce(),
