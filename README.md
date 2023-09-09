@@ -16,3 +16,4 @@ Before using the program in the file: `\ethereum_examples\node_modules\ethers\pa
 
 Then we need to insert our information in the `.env` and in the `main.ts` file.
 
+To run the main file exec `npm run main`
