@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
-    "main": "tsc && node dist/main.js"
+    "simple": "tsc && node dist/simple_tx.js",
+    "fine_tuned": "tsc && node dist/fine_tuned_tx.js"
   },
   "author": "",
   "license": "ISC",

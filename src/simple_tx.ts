@@ -14,20 +14,10 @@ const main = async () => {
 
   const signer = new Wallet(process.env.SIGNER_PRIVATE_KEY ?? '', provider);
 
-  const limit: bigint = await provider.estimateGas({
-    from: signer.address,
-    to: "your_to_address",
-    value: parseUnits("0.0000001", "ether"),
-  });
-
   const tx = await signer.sendTransaction({
-    from: "your_from_address",
-    to: "your_to_address",
+    from: "your_from_ethereum_account",
+    to: "your_to_ethereum_account",
     value: parseUnits("0.0000001", "ether"),
-    gasLimit: limit,
-    nonce: await signer.getNonce(),
-    maxPriorityFeePerGas: parseUnits("1", "gwei"),
-    chainId: 11155111,
   });
   console.log("Mining transaction...");
   console.log(`https://${network}.etherscan.io/tx/${tx.hash}`);
